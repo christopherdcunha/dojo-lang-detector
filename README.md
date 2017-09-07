@@ -15,6 +15,10 @@ i.e:
 
 Then the grading.py script is going to be used to get the official dojo score.
 
+i.e:
+
+  python grade.py answer_100.json team_n_answers.json test_100.json
+
 The score is computed by adding 1 for correct guesses, -1 for incorrect guesses
 and 0 for no guess.
 
@@ -25,11 +29,11 @@ and 0 for no guess.
 Label training dataset as a jsonl ([JSON Lines](http://jsonlines.org/)) file containing objects with the
 following schema:
 
-1. text  
+1. text
 UTF-8 extract from wikipedia articles, cleared of HTML tags.
-2. lang  
+2. lang
 iso code of the language in the extract.
-3. subject  
+3. subject
 the wikipedia subject of the language of the extract
 
 ## train_*.json
