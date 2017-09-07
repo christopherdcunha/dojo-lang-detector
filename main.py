@@ -18,7 +18,8 @@ def load_training_data():
         try:
             yield json.loads(line)
         except Exception as e:
-            print('Invalid line', line, e)
+            # print('Invalid line', line, e)
+            pass
 
 def load_test_data():
     "Return generator yielding {'text': 'blablabla', 'example': 1}"
@@ -26,7 +27,8 @@ def load_test_data():
         try:
             yield json.loads(line)
         except Exception as e:
-            print('Invalid line', line, e)
+            # print('Invalid line', line, e)
+            pass
 
 def tokenize_data(data, key):
     "Return {'en': set('word', 'otherword'), ...}"
