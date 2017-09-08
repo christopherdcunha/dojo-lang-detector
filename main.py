@@ -1,15 +1,17 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import nltk
 import collections
 import json
 import sys
+import string
 
 training_filepath="lang_train.json"
 
 def word_tokenize(text):
     # NOTE: This should be replaced by nltk's word_tokenization.
+    text = text.translate(str.maketrans('', '', string.punctuation))
+    text = text.lower()
     return text.split(' ')
 
 def load_training_data():
